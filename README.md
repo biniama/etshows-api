@@ -1,5 +1,5 @@
-# mezmur-api
-Songs REST API
+# etshows-api
+Cinema and Movies REST API
 
 use admin
 db.createUser(
@@ -10,11 +10,27 @@ db.createUser(
   }
 )
 
-use mezmur
+use etshows
 db.createUser(
   {
-    user: "mezmur",
-    pwd: "mezmur",
-    roles: [ { role: "readWrite", db: "mezmur" }]
+    user: "etshows",
+    pwd: "etshows",
+    roles: [ { role: "readWrite", db: "etshows" }]
   }
 )
+
+
+#Sample API Data
+{
+  "title": "Movie 2",
+  "genre": "Comedy",
+  "synopsis": "Csynopsis Csynopsis Csynopsis",
+  "tag": ["Tag1", "Tag2"],
+  "trailerUrl": "https://www.youtube.com/watch?v=OizY63b1jaE",
+  "cinemas": [
+    {
+    	"name": "Mati Multiplex",
+    	"showDayTime": ["Sun 8:00", "Sat 9:00", "Wed 10:00", "Thu 10:00"]
+    }
+  ]
+}

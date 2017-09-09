@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 const app = express();
 
 //connnect to mongodb
-mongoose.connect('mongodb://mezmur:mezmur@127.0.0.1:27017/mezmur', {
+mongoose.connect('mongodb://etshows:etshows@127.0.0.1:27017/etshows', {
     useMongoClient: true
 });
 //because mongoose's Promise is deprecated ???
