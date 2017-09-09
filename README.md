@@ -34,3 +34,11 @@ db.createUser(
     }
   ]
 }
+
+#How to Run
+##Terminal Tab 1
+mongod --dbpath /Users/biniam.asnake/data/db/
+##Terminal Tab 2
+mongo
+##Terminal Tab 3
+etshows-api (master)$ nodemon
