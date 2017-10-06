@@ -1,7 +1,8 @@
 # etshows-api
 Cinema and Movies REST API
 
-use admin
+```mongo
+use admin  
 db.createUser(
   {
     user: "user",
@@ -9,8 +10,10 @@ db.createUser(
     roles: [ { role: "userAdminAnyDatabase", db: "admin" } ]
   }
 )
+```
 
-use etshows
+```mongo
+use etshows  
 db.createUser(
   {
     user: "etshows",
@@ -18,9 +21,10 @@ db.createUser(
     roles: [ { role: "readWrite", db: "etshows" }]
   }
 )
+```
 
-
-#Sample API Data
+# Sample API Data
+```json
 {
   "title": "Movie 2",
   "genre": "Comedy",
@@ -34,11 +38,12 @@ db.createUser(
     }
   ]
 }
+```
 
-#How to Run
-##Terminal Tab 1
-mongod --dbpath /Users/biniam.asnake/data/db/
-##Terminal Tab 2
-mongo
-##Terminal Tab 3
-etshows-api (master)$ nodemon
+# How to Run
+## Terminal Tab 1
+`mongod --dbpath /Users/biniam.asnake/data/db/`
+## Terminal Tab 2
+`mongo`
+## Terminal Tab 3
+`etshows-api (master)$ nodemon`
